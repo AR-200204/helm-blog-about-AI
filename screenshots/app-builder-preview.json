@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Helm Review — Independent briefings on AI agents",
+      "hasCanvas": false,
+      "bodyTextLen": 2543,
+      "bodyTextHash": "117a9769fe042f9ab7ad4775d183ee6f4d4c20c27e61374affbd7681ecec2d5f",
+      "bodyTextPrefix": "Skip to content ISSUE 11 · 9 NOVEMBER 2026 INDEPENDENT · NO PAID",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Helm Review — Independent briefings on AI agents",
+      "hasCanvas": false,
+      "bodyTextLen": 2454,
+      "bodyTextHash": "e670bfefacbe8357f099f75db47c6cc234f9625f040db6957135147ac1c6c858",
+      "bodyTextPrefix": "Skip to content ISSUE 11 · 9 NOVEMBER 2026 Helm REVIEW Open menu",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
