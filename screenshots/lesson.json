@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/lesson/blocks/blocks-forward",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Primer — short programming lessons",
+      "hasCanvas": false,
+      "bodyTextLen": 519,
+      "bodyTextHash": "fe989ee3a6126c1ca22cd68b19fbc004fbc60ab7f043dca6c3bc1e81e1f09ecc",
+      "bodyTextPrefix": "Skip to content Primer Paths Playground Progress Kids Standard B",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/lesson.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Primer — short programming lessons",
+      "hasCanvas": false,
+      "bodyTextLen": 519,
+      "bodyTextHash": "fe989ee3a6126c1ca22cd68b19fbc004fbc60ab7f043dca6c3bc1e81e1f09ecc",
+      "bodyTextPrefix": "Skip to content Primer Paths Playground Progress Kids Standard B",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/lesson-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/lesson.json"
+}

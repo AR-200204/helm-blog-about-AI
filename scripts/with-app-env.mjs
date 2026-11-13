@@ -111,17 +111,7 @@ function main(argv) {
     process.exit(2);
   }
   const env = mergeAppEnv(readAppEnv(projectRoot()), process.env);
-  const isWindows = process.platform === "win32";
-
-const executable = isWindows && command === "vite"
-  ? "vite.cmd"
-  : command;
-
-const child = spawn(executable, args, {
-  stdio: "inherit",
-  env,
-  shell: isWindows,
-});
+  const child = spawn(command, args, { stdio: "inherit", env });
   // The dev server is long-running and is stopped by signalling this wrapper.
   for (const signal of ["SIGINT", "SIGTERM", "SIGHUP"]) {
     process.on(signal, () => child.kill(signal));

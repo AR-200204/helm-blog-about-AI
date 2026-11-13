@@ -10,297 +10,163 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CorrectionsRouteImport } from './routes/corrections'
-import { Route as DisclosureRouteImport } from './routes/disclosure'
-import { Route as EditorialRouteImport } from './routes/editorial'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as GlossaryRouteImport } from './routes/glossary'
-import { Route as MethodologyRouteImport } from './routes/methodology'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as RankingsRouteImport } from './routes/rankings'
-import { Route as SearchRouteImport } from './routes/search'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as AgentsSlugRouteImport } from './routes/agents/$slug'
-import { Route as AuthorsIndexRouteImport } from './routes/authors/index'
-import { Route as AuthorsSlugRouteImport } from './routes/authors/$slug'
-import { Route as BriefingsIndexRouteImport } from './routes/briefings/index'
-import { Route as BriefingsSlugRouteImport } from './routes/briefings/$slug'
-import { Route as TopicsIndexRouteImport } from './routes/topics/index'
-import { Route as TopicsSlugRouteImport } from './routes/topics/$slug'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EasingRouteImport } from './routes/easing'
+import { Route as PathsRouteImport } from './routes/paths'
+import { Route as PlaygroundRouteImport } from './routes/playground'
+import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as ArticlesIndexRouteImport } from './routes/articles.index'
+import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
+import { Route as LearnTrackRouteImport } from './routes/learn.$track'
+import { Route as LessonTrackIdRouteImport } from './routes/lesson.$track.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CorrectionsRoute = CorrectionsRouteImport.update({
-  id: '/corrections',
-  path: '/corrections',
+const EasingRoute = EasingRouteImport.update({
+  id: '/easing',
+  path: '/easing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DisclosureRoute = DisclosureRouteImport.update({
-  id: '/disclosure',
-  path: '/disclosure',
+const PathsRoute = PathsRouteImport.update({
+  id: '/paths',
+  path: '/paths',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EditorialRoute = EditorialRouteImport.update({
-  id: '/editorial',
-  path: '/editorial',
+const PlaygroundRoute = PlaygroundRouteImport.update({
+  id: '/playground',
+  path: '/playground',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
+const ProgressRoute = ProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GlossaryRoute = GlossaryRouteImport.update({
-  id: '/glossary',
-  path: '/glossary',
+const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const LearnTrackRoute = LearnTrackRouteImport.update({
+  id: '/learn/$track',
+  path: '/learn/$track',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MethodologyRoute = MethodologyRouteImport.update({
-  id: '/methodology',
-  path: '/methodology',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RankingsRoute = RankingsRouteImport.update({
-  id: '/rankings',
-  path: '/rankings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SearchRoute = SearchRouteImport.update({
-  id: '/search',
-  path: '/search',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AgentsSlugRoute = AgentsSlugRouteImport.update({
-  id: '/agents/$slug',
-  path: '/agents/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
-  id: '/authors/',
-  path: '/authors/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
-  id: '/authors/$slug',
-  path: '/authors/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BriefingsIndexRoute = BriefingsIndexRouteImport.update({
-  id: '/briefings/',
-  path: '/briefings/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BriefingsSlugRoute = BriefingsSlugRouteImport.update({
-  id: '/briefings/$slug',
-  path: '/briefings/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TopicsIndexRoute = TopicsIndexRouteImport.update({
-  id: '/topics/',
-  path: '/topics/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TopicsSlugRoute = TopicsSlugRouteImport.update({
-  id: '/topics/$slug',
-  path: '/topics/$slug',
+const LessonTrackIdRoute = LessonTrackIdRouteImport.update({
+  id: '/lesson/$track/$id',
+  path: '/lesson/$track/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/corrections': typeof CorrectionsRoute
-  '/disclosure': typeof DisclosureRoute
-  '/editorial': typeof EditorialRoute
-  '/faq': typeof FaqRoute
-  '/glossary': typeof GlossaryRoute
-  '/methodology': typeof MethodologyRoute
-  '/privacy': typeof PrivacyRoute
-  '/rankings': typeof RankingsRoute
-  '/search': typeof SearchRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/terms': typeof TermsRoute
-  '/agents/$slug': typeof AgentsSlugRoute
-  '/authors/$slug': typeof AuthorsSlugRoute
-  '/briefings/$slug': typeof BriefingsSlugRoute
-  '/topics/$slug': typeof TopicsSlugRoute
-  '/authors/': typeof AuthorsIndexRoute
-  '/briefings/': typeof BriefingsIndexRoute
-  '/topics/': typeof TopicsIndexRoute
+  '/articles': typeof ArticlesRouteWithChildren
+  '/dashboard': typeof DashboardRoute
+  '/easing': typeof EasingRoute
+  '/paths': typeof PathsRoute
+  '/playground': typeof PlaygroundRoute
+  '/progress': typeof ProgressRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/learn/$track': typeof LearnTrackRoute
+  '/articles/': typeof ArticlesIndexRoute
+  '/lesson/$track/$id': typeof LessonTrackIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/corrections': typeof CorrectionsRoute
-  '/disclosure': typeof DisclosureRoute
-  '/editorial': typeof EditorialRoute
-  '/faq': typeof FaqRoute
-  '/glossary': typeof GlossaryRoute
-  '/methodology': typeof MethodologyRoute
-  '/privacy': typeof PrivacyRoute
-  '/rankings': typeof RankingsRoute
-  '/search': typeof SearchRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/terms': typeof TermsRoute
-  '/agents/$slug': typeof AgentsSlugRoute
-  '/authors/$slug': typeof AuthorsSlugRoute
-  '/briefings/$slug': typeof BriefingsSlugRoute
-  '/topics/$slug': typeof TopicsSlugRoute
-  '/authors': typeof AuthorsIndexRoute
-  '/briefings': typeof BriefingsIndexRoute
-  '/topics': typeof TopicsIndexRoute
+  '/dashboard': typeof DashboardRoute
+  '/easing': typeof EasingRoute
+  '/paths': typeof PathsRoute
+  '/playground': typeof PlaygroundRoute
+  '/progress': typeof ProgressRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/learn/$track': typeof LearnTrackRoute
+  '/articles': typeof ArticlesIndexRoute
+  '/lesson/$track/$id': typeof LessonTrackIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/corrections': typeof CorrectionsRoute
-  '/disclosure': typeof DisclosureRoute
-  '/editorial': typeof EditorialRoute
-  '/faq': typeof FaqRoute
-  '/glossary': typeof GlossaryRoute
-  '/methodology': typeof MethodologyRoute
-  '/privacy': typeof PrivacyRoute
-  '/rankings': typeof RankingsRoute
-  '/search': typeof SearchRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/terms': typeof TermsRoute
-  '/agents/$slug': typeof AgentsSlugRoute
-  '/authors/$slug': typeof AuthorsSlugRoute
-  '/briefings/$slug': typeof BriefingsSlugRoute
-  '/topics/$slug': typeof TopicsSlugRoute
-  '/authors/': typeof AuthorsIndexRoute
-  '/briefings/': typeof BriefingsIndexRoute
-  '/topics/': typeof TopicsIndexRoute
+  '/articles': typeof ArticlesRouteWithChildren
+  '/dashboard': typeof DashboardRoute
+  '/easing': typeof EasingRoute
+  '/paths': typeof PathsRoute
+  '/playground': typeof PlaygroundRoute
+  '/progress': typeof ProgressRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/learn/$track': typeof LearnTrackRoute
+  '/articles/': typeof ArticlesIndexRoute
+  '/lesson/$track/$id': typeof LessonTrackIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
-    | '/contact'
-    | '/corrections'
-    | '/disclosure'
-    | '/editorial'
-    | '/faq'
-    | '/glossary'
-    | '/methodology'
-    | '/privacy'
-    | '/rankings'
-    | '/search'
-    | '/sitemap.xml'
-    | '/terms'
-    | '/agents/$slug'
-    | '/authors/$slug'
-    | '/briefings/$slug'
-    | '/topics/$slug'
-    | '/authors/'
-    | '/briefings/'
-    | '/topics/'
+    | '/articles'
+    | '/dashboard'
+    | '/easing'
+    | '/paths'
+    | '/playground'
+    | '/progress'
+    | '/articles/$slug'
+    | '/learn/$track'
+    | '/articles/'
+    | '/lesson/$track/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
-    | '/contact'
-    | '/corrections'
-    | '/disclosure'
-    | '/editorial'
-    | '/faq'
-    | '/glossary'
-    | '/methodology'
-    | '/privacy'
-    | '/rankings'
-    | '/search'
-    | '/sitemap.xml'
-    | '/terms'
-    | '/agents/$slug'
-    | '/authors/$slug'
-    | '/briefings/$slug'
-    | '/topics/$slug'
-    | '/authors'
-    | '/briefings'
-    | '/topics'
+    | '/dashboard'
+    | '/easing'
+    | '/paths'
+    | '/playground'
+    | '/progress'
+    | '/articles/$slug'
+    | '/learn/$track'
+    | '/articles'
+    | '/lesson/$track/$id'
   id:
     | '__root__'
     | '/'
-    | '/about'
-    | '/contact'
-    | '/corrections'
-    | '/disclosure'
-    | '/editorial'
-    | '/faq'
-    | '/glossary'
-    | '/methodology'
-    | '/privacy'
-    | '/rankings'
-    | '/search'
-    | '/sitemap.xml'
-    | '/terms'
-    | '/agents/$slug'
-    | '/authors/$slug'
-    | '/briefings/$slug'
-    | '/topics/$slug'
-    | '/authors/'
-    | '/briefings/'
-    | '/topics/'
+    | '/articles'
+    | '/dashboard'
+    | '/easing'
+    | '/paths'
+    | '/playground'
+    | '/progress'
+    | '/articles/$slug'
+    | '/learn/$track'
+    | '/articles/'
+    | '/lesson/$track/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  ContactRoute: typeof ContactRoute
-  CorrectionsRoute: typeof CorrectionsRoute
-  DisclosureRoute: typeof DisclosureRoute
-  EditorialRoute: typeof EditorialRoute
-  FaqRoute: typeof FaqRoute
-  GlossaryRoute: typeof GlossaryRoute
-  MethodologyRoute: typeof MethodologyRoute
-  PrivacyRoute: typeof PrivacyRoute
-  RankingsRoute: typeof RankingsRoute
-  SearchRoute: typeof SearchRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  TermsRoute: typeof TermsRoute
-  AgentsSlugRoute: typeof AgentsSlugRoute
-  AuthorsSlugRoute: typeof AuthorsSlugRoute
-  BriefingsSlugRoute: typeof BriefingsSlugRoute
-  TopicsSlugRoute: typeof TopicsSlugRoute
-  AuthorsIndexRoute: typeof AuthorsIndexRoute
-  BriefingsIndexRoute: typeof BriefingsIndexRoute
-  TopicsIndexRoute: typeof TopicsIndexRoute
+  ArticlesRoute: typeof ArticlesRouteWithChildren
+  DashboardRoute: typeof DashboardRoute
+  EasingRoute: typeof EasingRoute
+  PathsRoute: typeof PathsRoute
+  PlaygroundRoute: typeof PlaygroundRoute
+  ProgressRoute: typeof ProgressRoute
+  LearnTrackRoute: typeof LearnTrackRoute
+  LessonTrackIdRoute: typeof LessonTrackIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -312,171 +178,103 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/corrections': {
-      id: '/corrections'
-      path: '/corrections'
-      fullPath: '/corrections'
-      preLoaderRoute: typeof CorrectionsRouteImport
+    '/easing': {
+      id: '/easing'
+      path: '/easing'
+      fullPath: '/easing'
+      preLoaderRoute: typeof EasingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/disclosure': {
-      id: '/disclosure'
-      path: '/disclosure'
-      fullPath: '/disclosure'
-      preLoaderRoute: typeof DisclosureRouteImport
+    '/paths': {
+      id: '/paths'
+      path: '/paths'
+      fullPath: '/paths'
+      preLoaderRoute: typeof PathsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/editorial': {
-      id: '/editorial'
-      path: '/editorial'
-      fullPath: '/editorial'
-      preLoaderRoute: typeof EditorialRouteImport
+    '/playground': {
+      id: '/playground'
+      path: '/playground'
+      fullPath: '/playground'
+      preLoaderRoute: typeof PlaygroundRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
+    '/progress': {
+      id: '/progress'
+      path: '/progress'
+      fullPath: '/progress'
+      preLoaderRoute: typeof ProgressRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/glossary': {
-      id: '/glossary'
-      path: '/glossary'
-      fullPath: '/glossary'
-      preLoaderRoute: typeof GlossaryRouteImport
+    '/articles/': {
+      id: '/articles/'
+      path: '/'
+      fullPath: '/articles/'
+      preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/$slug': {
+      id: '/articles/$slug'
+      path: '/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/learn/$track': {
+      id: '/learn/$track'
+      path: '/learn/$track'
+      fullPath: '/learn/$track'
+      preLoaderRoute: typeof LearnTrackRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/methodology': {
-      id: '/methodology'
-      path: '/methodology'
-      fullPath: '/methodology'
-      preLoaderRoute: typeof MethodologyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/rankings': {
-      id: '/rankings'
-      path: '/rankings'
-      fullPath: '/rankings'
-      preLoaderRoute: typeof RankingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/search': {
-      id: '/search'
-      path: '/search'
-      fullPath: '/search'
-      preLoaderRoute: typeof SearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/agents/$slug': {
-      id: '/agents/$slug'
-      path: '/agents/$slug'
-      fullPath: '/agents/$slug'
-      preLoaderRoute: typeof AgentsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/authors/': {
-      id: '/authors/'
-      path: '/authors'
-      fullPath: '/authors/'
-      preLoaderRoute: typeof AuthorsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/authors/$slug': {
-      id: '/authors/$slug'
-      path: '/authors/$slug'
-      fullPath: '/authors/$slug'
-      preLoaderRoute: typeof AuthorsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/briefings/': {
-      id: '/briefings/'
-      path: '/briefings'
-      fullPath: '/briefings/'
-      preLoaderRoute: typeof BriefingsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/briefings/$slug': {
-      id: '/briefings/$slug'
-      path: '/briefings/$slug'
-      fullPath: '/briefings/$slug'
-      preLoaderRoute: typeof BriefingsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/topics/': {
-      id: '/topics/'
-      path: '/topics'
-      fullPath: '/topics/'
-      preLoaderRoute: typeof TopicsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/topics/$slug': {
-      id: '/topics/$slug'
-      path: '/topics/$slug'
-      fullPath: '/topics/$slug'
-      preLoaderRoute: typeof TopicsSlugRouteImport
+    '/lesson/$track/$id': {
+      id: '/lesson/$track/$id'
+      path: '/lesson/$track/$id'
+      fullPath: '/lesson/$track/$id'
+      preLoaderRoute: typeof LessonTrackIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
+interface ArticlesRouteChildren {
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
+  ArticlesIndexRoute: typeof ArticlesIndexRoute
+}
+
+const ArticlesRouteChildren: ArticlesRouteChildren = {
+  ArticlesSlugRoute: ArticlesSlugRoute,
+  ArticlesIndexRoute: ArticlesIndexRoute,
+}
+
+const ArticlesRouteWithChildren = ArticlesRoute._addFileChildren(
+  ArticlesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  ContactRoute: ContactRoute,
-  CorrectionsRoute: CorrectionsRoute,
-  DisclosureRoute: DisclosureRoute,
-  EditorialRoute: EditorialRoute,
-  FaqRoute: FaqRoute,
-  GlossaryRoute: GlossaryRoute,
-  MethodologyRoute: MethodologyRoute,
-  PrivacyRoute: PrivacyRoute,
-  RankingsRoute: RankingsRoute,
-  SearchRoute: SearchRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
-  TermsRoute: TermsRoute,
-  AgentsSlugRoute: AgentsSlugRoute,
-  AuthorsSlugRoute: AuthorsSlugRoute,
-  BriefingsSlugRoute: BriefingsSlugRoute,
-  TopicsSlugRoute: TopicsSlugRoute,
-  AuthorsIndexRoute: AuthorsIndexRoute,
-  BriefingsIndexRoute: BriefingsIndexRoute,
-  TopicsIndexRoute: TopicsIndexRoute,
+  ArticlesRoute: ArticlesRouteWithChildren,
+  DashboardRoute: DashboardRoute,
+  EasingRoute: EasingRoute,
+  PathsRoute: PathsRoute,
+  PlaygroundRoute: PlaygroundRoute,
+  ProgressRoute: ProgressRoute,
+  LearnTrackRoute: LearnTrackRoute,
+  LessonTrackIdRoute: LessonTrackIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

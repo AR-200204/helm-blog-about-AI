@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/articles/nvidia-ceo-week",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Primer — short programming lessons",
+      "hasCanvas": false,
+      "bodyTextLen": 2957,
+      "bodyTextHash": "b4feac7081d3268ea0c9760934c32915543c85806e67e1f61655596c7d349595",
+      "bodyTextPrefix": "Skip to content Primer Paths Articles Dashboard Playground Progr",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/nvidia-smoke.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Primer — short programming lessons",
+      "hasCanvas": false,
+      "bodyTextLen": 3033,
+      "bodyTextHash": "5b9c8cf8fc8c8417b944848b950e9cce37ec63794ef3841eb347a1168f5b3021",
+      "bodyTextPrefix": "Skip to content Primer Paths Articles Dashboard Playground Progr",
+      "horizontalOverflow": true,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/nvidia-smoke-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/nvidia-smoke.json"
+}

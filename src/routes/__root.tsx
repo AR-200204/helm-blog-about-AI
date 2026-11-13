@@ -1,55 +1,54 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { SiteShell } from "@/components/site-shell";
-import { MissingPage } from "@/components/missing-page";
 import appCss from "../styles.css?url";
+
+const APP_NAME = "Primer";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Helm Review — Independent briefings on AI agents" },
+      { title: "Primer — short programming lessons" },
       {
         name: "description",
         content:
-          "Helm Review ranks and explains the AI agents people actually run: twenty profiles, field briefings, and a public method.",
+          "Learn programming in short lessons. A no-typing block path for children, plus JavaScript, Python, and web pages.",
       },
-      { name: "theme-color", content: "#f3efe6" },
+      { name: "theme-color", content: "#243044" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
   }),
-  component: RootComponent,
-  notFoundComponent: MissingPage,
-});
-
-function RootComponent() {
-  return (
+  component: () => (
     <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var p=JSON.parse(localStorage.getItem("primer-progress")||"{}");if(p.state&&p.state.pace==="child")document.documentElement.dataset.pace="child";}catch(e){}',
+          }}
+        />
         <PreviewHostBridge />
         <AuthProvider>
-          <SiteShell>
-            <Outlet />
-          </SiteShell>
+          <Outlet />
         </AuthProvider>
         <Scripts />
       </body>
     </html>
-  );
-}
+  ),
+});
